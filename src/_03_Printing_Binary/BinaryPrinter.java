@@ -8,12 +8,14 @@ public class BinaryPrinter {
 	// others.
 	// Create a main method to test your methods.
 
-	public void printByteBinary(byte b) {
-
+	public static void printByteBinary(byte b) {
+		int i = (int)b;
+		printIntBinary(i);
 	}
 
-	public void printShortBinary(short s) {
-
+	public static void printShortBinary(short s) {
+		int i = (int)s;
+		printIntBinary(i);
 	}
 
 	public static void printIntBinary(int i) {
@@ -27,11 +29,16 @@ public class BinaryPrinter {
 
 	}
 
-	public void printLongBinary(long l) {
-
+	public static void printLongBinary(long l) {
+		int i = (int)l;
+		printIntBinary(i);
 	}
 
 	public static void main(String[] args) {
-		printIntBinary(8);
+		printByteBinary((byte) 10);
+		printShortBinary((short) 20);
+		printIntBinary(30);
+		printLongBinary(37);
+		
 	}
 }
