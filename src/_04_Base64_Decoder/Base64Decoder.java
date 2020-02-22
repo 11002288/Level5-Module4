@@ -64,10 +64,17 @@ public class Base64Decoder {
 		last += test;
 		}
 		String temp1 = last.substring(0, 8);
-		last.substring(8, 16);
-		last.substring(16, 24);
-		
-		return null;
+		String temp2 = last.substring(8, 16);
+		String temp3 = last.substring(16, 24);
+		int result0 = Integer.parseInt(temp1,2);
+		int result1 = Integer.parseInt(temp2,2);
+		int result2 = Integer.parseInt(temp3,2);
+		byte[] answer = new byte[3];
+		answer[0] = (byte)result0;
+		answer[1] = (byte)result1;
+		answer[2] = (byte)result2;
+	    
+		return answer;
 	}
 	
 	//3. Complete this method so that it takes in a string of any length
